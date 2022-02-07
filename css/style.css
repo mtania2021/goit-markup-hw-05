@@ -102,6 +102,10 @@ img {
   margin-left: 40px;
 }
 
+.header-link {
+  transition: transform 2000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .header-link:hover,
 .header-link:focus {
   color: var(--accent-color);
@@ -124,6 +128,21 @@ img {
 
 .header-contacts-name {
   margin-left: 10px;
+}
+
+.current {
+  position: relative;
+}
+
+.current::after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  background-color: var(--accent-color);
+  left: 0;
+  bottom: -32px;
+  border-radius: 4px;
 }
 
 /*------hero------*/
@@ -173,34 +192,6 @@ img {
   margin: 0 auto;
   justify-content: center;
   height: 50px;
-}
-
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.2);
-}
-
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
-  background: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  position: absolute;
 }
 
 /*------feature------*/
@@ -367,10 +358,12 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .networks-link-icon {
   fill: #afb1b8;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-networks-link:hover,
@@ -410,10 +403,12 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-item-icons {
   fill: #afb1b8;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-item-link:hover .client-item-icons {
@@ -470,6 +465,7 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--white-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-item-mail,
@@ -480,6 +476,7 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-item {
@@ -520,10 +517,12 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-networks-link-icon {
   fill: var(--white-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-networks + .footer-social-networks {
@@ -539,7 +538,7 @@ img {
   fill: #ffffff;
 }
 
-/*------css-portfolio-------*/
+/*-----------css-portfolio-------------*/
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -601,6 +600,7 @@ img {
   background-color: var(--portfolio-btn);
   border-radius: 4px;
   border: transparent;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio {
@@ -644,6 +644,7 @@ img {
 
 .portfolio-item-link {
   display: block;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item-link:hover,
@@ -652,4 +653,74 @@ img {
   box-sizing: border-box;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-item:hover .text-absolute {
+  transform: translateY(0);
+}
+
+.portfolio-item-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.text-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  background: rgba(33, 150, 243, 0.9);
+  padding: 64px 24px;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*------------модалка-----------*/
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  transition: opacity 250ms, visibility 250ms;
+}
+
+.backdrop .is-hidden .modal {
+  transform: rotate(-300deg) scale(0.5);
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal {
+  width: 528px;
+  min-height: 581px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0) scale(1);
+  transition: transform 250ms;
+}
+
+.modal-close-btn {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  right: 8px;
 }

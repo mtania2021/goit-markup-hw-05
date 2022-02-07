@@ -25,7 +25,7 @@
 
                 <ul class="header-list">
                     <li class="header-item">
-                        <a href=""  class="header-link">Студия</a>
+                        <a href=""  class="header-link current">Студия</a>
                     </li>
                     <li class="header-item">
                         <a href="./portfolio.html" class="header-link">Портфолио</a>
@@ -63,13 +63,6 @@
                 <h1 class="hero-title">Эффективные решения вашего бизнеса</h1>
                 <button type="button" class="hero-btn" data-modal-open>Заказать услугу</button>
                 
-                <div class="backdrop is-hidden" data-modal>
-                    <div class="modal">
-                        <button data-modal-close>
-                            <svg class="icon-vector" width="10" height="10"></svg>
-                        </button>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -417,6 +410,16 @@
         </div>
         
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" data-modal-close class="modal-close-btn">
+                <svg class="modal-icons-close" width="11" height="11">
+                    <use href="./Images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
 
     <script src="./js/modal.js"></script>
 </body>
