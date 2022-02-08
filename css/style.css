@@ -142,7 +142,7 @@ img {
   position: absolute;
   background-color: var(--accent-color);
   left: 0;
-  bottom: -32px;
+  bottom: -30px;
   border-radius: 4px;
 }
 
@@ -284,9 +284,10 @@ img {
   text-transform: uppercase;
   color: #ffffff;
   width: 370px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 27px;
 }
 
 .activity-item + .activity-item {
@@ -347,6 +348,10 @@ img {
   justify-content: center;
 }
 
+.command-social-networks {
+  margin-right: 10px;
+}
+
 .command-social-networks:nth-child(1) {
   margin-left: 0;
 }
@@ -365,8 +370,6 @@ img {
 
 .networks-link-icon {
   fill: #afb1b8;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-networks-link:hover,
@@ -376,6 +379,8 @@ img {
 
 .social-networks-link:hover .networks-link-icon {
   fill: #ffffff;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*-------------client------------*/
@@ -406,8 +411,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-item-icons {
@@ -423,6 +426,8 @@ img {
 .client-item-link:hover,
 .client-item-link:focus {
   border: 1px solid var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*------footer------*/
@@ -530,8 +535,6 @@ img {
 
 .footer-networks-link-icon {
   fill: var(--white-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-networks + .footer-social-networks {
@@ -606,7 +609,6 @@ img {
   padding-left: 22px;
   padding-right: 22px;
   background-color: var(--portfolio-btn);
-  border-radius: 4px;
   border: transparent;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -653,12 +655,10 @@ img {
 
 .portfolio-item-link {
   display: block;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-item-link:hover,
-.portfolio-item-link:focus {
+.portfolio-item-link:hover .text-absolute,
+.portfolio-item-link:focus .text-absolute {
   box-sizing: border-box;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
