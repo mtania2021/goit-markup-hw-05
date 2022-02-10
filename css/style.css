@@ -106,16 +106,18 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: color;
-  transition-property: fill;
 }
 
 .header-link:hover,
 .header-link:focus {
   color: var(--accent-color);
-  fill: var(--accent-color);
 }
 
-.header-item:nth-child(1) {
+.studio-portfolio:nth-child(1) {
+  color: var(--accent-color);
+}
+
+.studio-portfolio-link:nth-child(2) {
   color: var(--accent-color);
 }
 
@@ -127,6 +129,7 @@ img {
   display: flex;
   margin-left: auto;
   align-items: center;
+  transition-property: fill, color;
 }
 
 .header-item-contacts {
@@ -372,11 +375,13 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: background-color;
-  transition-property: fill;
 }
 
 .networks-link-icon {
   fill: #afb1b8;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-networks-link:hover,
@@ -416,6 +421,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: border;
 }
 
 .client-item-icons {
@@ -538,7 +546,6 @@ img {
   justify-content: center;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: fill;
   transition-property: background-color;
 }
 
@@ -620,10 +627,7 @@ img {
   border: transparent;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: background-color;
-  transition-property: color;
-  transition-property: box-shadow;
-  transition-property: border-radius;
+  transition-property: background-color, color, box-shadow;
   border-radius: 4px;
 }
 
@@ -673,12 +677,15 @@ img {
 .portfolio-item-link:hover .text-absolute,
 .portfolio-item-link:focus .text-absolute {
   box-sizing: border-box;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-item:hover .text-absolute {
   transform: translateY(0);
+}
+
+.portfolio-item-link:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-item-img {
@@ -699,10 +706,9 @@ img {
   height: 100%;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: box-shadow;
+  border: 1px solid #eeeeee;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  border: 1px solid #eeeeee;
 }
 
 /*------------модалка-----------*/
