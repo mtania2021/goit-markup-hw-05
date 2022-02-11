@@ -431,7 +431,6 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: fill;
-  transition-property: border;
 }
 
 .client-item-link:hover .client-item-icons {
