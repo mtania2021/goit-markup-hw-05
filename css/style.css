@@ -125,6 +125,10 @@ img {
   margin-left: 30px;
 }
 
+.header-contacts-icons {
+  fill: currentColor;
+}
+
 .header-list-contacts {
   display: flex;
   margin-left: auto;
@@ -693,7 +697,7 @@ img {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-item:hover .text-absolute {
+.portfolio-item-link:hover .text-absolute {
   transform: translateY(0);
 }
 
